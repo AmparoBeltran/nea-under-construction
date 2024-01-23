@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap');
+* {
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'red hat display', sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+    background: white;
+    margin: 0;
+}
+
+h1 {
+    font-size: 5em;
+    margin-top: 2em;
+}
+
+.container {
+    min-width: 76%;
+    position: relative;
+    min-height: 30vh;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 6em;
+}
+
+.container-logo {
+    display: flex;
+    position: absolute;
+    left: 0;
+    grid-gap: 2em;
+}
+
+.logo {
+    background-image: url(./images/cat.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20em;
+    height: 20em;
+    animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+    50% {
+        transform: rotate(180deg);
+    }
+}
+
+.lines {
+    width: 7em;
+    background-image: url(./images/lines.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+
+.message {
+    width: max-content;
+}
+
+.container-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: .65;
+}
+
+.container-right {
+    display: flex;
+    align-self: stretch;
+    flex: .3;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 4em;
+}
+
+footer {
+    /* width: 100%; */
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 6em 12em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 2em;
+    padding: 0 6em;
+    color: white;
+}
+
+p {
+    font-size: .9em;
+    line-height: 1.5em;
+}
+
+h3 {
+    font-size: 3.5em;
+    line-height: .8em;
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.form-input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    font-size: .9em;
+    color: white;
+    padding: .4em .4em;
+}
+
+.form-input-message {
+    border: 1px solid white;
+    background: none;
+    font-size: .9em;
+    padding: .4em .4em;
+    color: white;
+}
+
+::placeholder {
+    color: white;
+    font-weight: 100;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+input[type="submit"] {
+    border: 1px solid white;
+    background: none;
+    font-size: .9em;
+    text-transform: uppercase;
+    color: white;
+    padding: 1em 2em;
+    width: max-content;
+}
+
+.social-media {
+    display: flex;
+}
+
+.fa {
+    padding: 20px;
+    text-align: center;
+    margin: 5px 2px;
+    font-size: 30px;
+    /* width: 30px; */
+}
+
+.fa-linkedin {
+    border: 1px solid white;
+    color: white;
+}
+
+.fa-instagram {
+    border: 1px solid white;
+    color: white;
+}
+
+.fa-behance {
+    border: 1px solid white;
+    color: white;
+}
+
+.fa-behance:hover {
+    background: #00aff0;
+    border: none;
+}
+
+.fa-instagram:hover {
+    background: #125688;
+    border: none;
+}
+
+.fa-linkedin:hover {
+    background: #007bb5;
+    border: none;
+}
+
+.address {
+    color: black;
+    font-family: roboto;
+    font-weight: 100;
+}
+
+@media (max-width: 1024px) {
+
+    .container {
+        padding: 6em 0;
+        width: 90%;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 6em 0;
+    }
+    .container-left {
+        margin-left: 5em;
+    }
+    .container-right {
+        flex-direction: row;
+        margin-top: 8em;
+        grid-gap: 10em;
+    }
+}
+
+@media (max-width: 540px) {
+    .container {
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 5em 0 1em 0;
+    }
+    .container-logo {
+        grid-gap: 3em;
+    }
+    .container-left {
+        margin-left: 0;
+    }
+    .logo {
+        width: 10em;
+        height: 10em;
+    }
+    footer {
+        flex-direction: column;
+        padding: 3em 0;
+    }
+    .container-left {
+        flex-direction: column;
+    }
+    form {
+        padding: 0 2em;
+    }
+    .container-right {
+        flex-direction: column;
+        margin-top: 8em;
+        grid-gap: 2em;
+    }
+    .address {
+        max-width: 80%;
+        text-align: center;
+    }
+}
